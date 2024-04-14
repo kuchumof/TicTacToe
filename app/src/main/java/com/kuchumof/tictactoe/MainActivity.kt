@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             binding.button.text = cross
             binding.button.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             binding.button2.text = cross
             binding.button2.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             binding.button3.text = cross
             binding.button3.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             binding.button4.text = cross
             binding.button4.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
             binding.button5.text = cross
             binding.button5.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
             binding.button6.text = cross
             binding.button6.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
             binding.button7.text = cross
             binding.button7.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
             binding.button8.text = cross
             binding.button8.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
             binding.button9.text = cross
             binding.button9.isEnabled = false
             checkWin()
-            aiTurn()
+            computerTurn()
         }
     }
 
@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
         rand2 = (0 + (Math.random() * 3)).toInt()
     }
 
-    private fun aiTurn() {
+    private fun computerTurn() {
         randomComp()
         if (playingField[rand1][rand2] == cross || playingField[rand1][rand2] == zero) {
 
@@ -153,31 +153,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkWin() = with(binding) {
+        val playerWinStr: String = "Игрок победил"
         if ((button.text.equals("X")) && (button2.text.equals("X")) && (button3.text.equals("X"))) {
-            textView.text = "Игрок победил"
+            textView.text = playerWinStr
         }
         if ((button4.text.equals("X")) && (button5.text.equals("X")) && (button6.text.equals("X"))) {
-            textView.text = "Игрок победил"
+            textView.text = playerWinStr
         }
         if ((button7.text.equals("X")) && (button8.text.equals("X")) && (button9.text.equals("X"))) {
-            textView.text = "Игрок победил"
+            textView.text = playerWinStr
         }
         //-----------------------------------------------------------------------------------------
         if ((button.text.equals("X")) && (button4.text.equals("X")) && (button7.text.equals("X"))) {
-            textView.text = "Игрок победил"
+            textView.text = playerWinStr
         }
         if ((button2.text.equals("X")) && (button5.text.equals("X")) && (button8.text.equals("X"))) {
-            textView.text = "Игрок победил"
+            textView.text = playerWinStr
         }
         if ((button3.text.equals("X")) && (button6.text.equals("X")) && (button9.text.equals("X"))) {
-            textView.text = "Игрок победил"
+            textView.text = playerWinStr
         }
         //-----------------------------------------------------------------------------------------
         if ((button.text.equals("X")) && (button5.text.equals("X")) && (button9.text.equals("X"))) {
-            textView.text = "Игрок победил"
+            textView.text = playerWinStr
         }
         if ((button3.text.equals("X")) && (button5.text.equals("X")) && (button7.text.equals("X"))) {
-            textView.text = "Игрок победил"
+            textView.text = playerWinStr
         }
     }
 
